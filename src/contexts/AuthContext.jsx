@@ -38,9 +38,9 @@ export function AuthProvider({ children }) {
     setIsLogged(true);
   };
 
-  const initializeData = () => {
+  const initializeData = async () => {
     if (token) {
-      getLoggedUser();
+      await getLoggedUser();
     }
 
     setInitComplete(true);
